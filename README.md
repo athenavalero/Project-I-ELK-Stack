@@ -27,9 +27,12 @@ Load balancing ensures that the application will be highly available, in additio
 Jumpboxes work as another layer of protection for the servers. The servers can only be accessed through the jumpbox, so this effectively creates a separation between the user and the servers making it less susceptible for a widespread attack. 
 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- Filebeat watches 
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
+- Filebeat monitors log files, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
+    Source: https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html#:~:text=Filebeat%20is%20a%20lightweight%20shipper,Elasticsearch%20or%20Logstash%20for%20indexing.
+- Metricbeat records metrics and statistics from the system and services runing on the server and ships them to the output that you specify, such as Elasticsearch or Logstash.
+    Source: https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-overview.html#:~:text=Metricbeat%20takes%20the%20metrics%20and,Apache
+
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
